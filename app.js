@@ -3,6 +3,7 @@ const app = express();
 const cors = require("cors");
 const connect = require("./database/db");
 const Todo = require("./models/todo.model");
+require("dotenv").config();
 
 connect();
 app.use(cors());
@@ -10,6 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/api", (req, res) => {
+  console.log(process.env.MONGO_CON_STR);
   res.json({ message: "OK" });
 });
 

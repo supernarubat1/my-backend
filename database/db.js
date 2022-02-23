@@ -3,7 +3,7 @@ require("dotenv").config();
 
 const connect = () => {
   mongoose
-    .connect(process.env.MONGO_URL)
+    .connect(process.env.MONGO_CON_STR)
     .then(() => console.log("Database connection..."))
     .catch((err) => console.error(err));
 };

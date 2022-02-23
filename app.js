@@ -11,8 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/api", (req, res) => {
-  console.log(process.env);
-  res.json({ message: "OK" });
+  res.json({ message: "OK", env: process.env.MONGO_CON_STR });
 });
 
 // ADD

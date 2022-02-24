@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">88.57% </span>
+                <span class="strong">60% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>31/35</span>
+                <span class='fraction'>21/35</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>3/4</span>
+                <span class='fraction'>2/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.66% </span>
+                <span class="strong">33.33% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/6</span>
+                <span class='fraction'>2/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">88.23% </span>
+                <span class="strong">58.82% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>30/34</span>
+                <span class='fraction'>20/34</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -123,8 +123,7 @@
 <a name='L58'></a><a href='#L58'>58</a>
 <a name='L59'></a><a href='#L59'>59</a>
 <a name='L60'></a><a href='#L60'>60</a>
-<a name='L61'></a><a href='#L61'>61</a>
-<a name='L62'></a><a href='#L62'>62</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L61'></a><a href='#L61'>61</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -137,19 +136,7 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -158,20 +145,31 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -197,42 +195,41 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 &nbsp;
-app.get("/api", (req, res) =&gt; {
-  // console.log(CONNECTIONSTRING);
-  res.json({ message: "OK" });
+app.get("/api", <span class="fstat-no" title="function not covered" >(r</span>eq, res) =&gt; {
+<span class="cstat-no" title="statement not covered" >  res.json({ message: "OK" });</span>
 });
 &nbsp;
 // ADD
-app.post("/api/add", async (req, res) =&gt; {
-  const text = req.body.text;
+app.post("/api/add", <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
+  const text = <span class="cstat-no" title="statement not covered" >req.body.text;</span>
 &nbsp;
-  const newTodo = new Todo({ text });
+  const newTodo = <span class="cstat-no" title="statement not covered" >new Todo({ text });</span>
 &nbsp;
-  await newTodo.save();
+<span class="cstat-no" title="statement not covered" >  await newTodo.save();</span>
 &nbsp;
-  res.json({ status: "ok", data: newTodo });
+<span class="cstat-no" title="statement not covered" >  res.json({ status: "ok", data: newTodo });</span>
 });
 &nbsp;
 // GET
-app.get("/api/get", <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
-  const todos = <span class="cstat-no" title="statement not covered" >await Todo.find({});</span>
+app.get("/api/get", async (req, res) =&gt; {
+  const todos = await Todo.find({});
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  res.json({ status: "ok", data: todos });</span>
+  res.json({ status: "ok", data: todos });
 });
 &nbsp;
 // DELETE ONE
-app.delete("/api/del", async (req, res) =&gt; {
-  let id = req.body.id;
-  const test = req.body.test;
+app.delete("/api/del", <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
+  let id = <span class="cstat-no" title="statement not covered" >req.body.id;</span>
+  const test = <span class="cstat-no" title="statement not covered" >req.body.test;</span>
 &nbsp;
-  <span class="missing-if-branch" title="else path not taken" >E</span>if (test != undefined) {
-    const findId = await Todo.findOne({ text: test });
-    id = findId._id.toString();
+<span class="cstat-no" title="statement not covered" >  if (test != undefined) {</span>
+    const findId = <span class="cstat-no" title="statement not covered" >await Todo.findOne({ text: test });</span>
+<span class="cstat-no" title="statement not covered" >    id = findId._id.toString();</span>
   }
 &nbsp;
-  await Todo.deleteOne({ _id: id });
+<span class="cstat-no" title="statement not covered" >  await Todo.deleteOne({ _id: id });</span>
 &nbsp;
-  res.json({ status: "ok" });
+<span class="cstat-no" title="statement not covered" >  res.json({ status: "ok" });</span>
 });
 &nbsp;
 // CLEAR
@@ -253,7 +250,7 @@ module.exports = app;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu Feb 24 2022 21:27:02 GMT+0700 (เวลาอินโดจีน)
+                at Thu Feb 24 2022 22:52:21 GMT+0700 (เวลาอินโดจีน)
             </div>
         <script src="../prettify.js"></script>
         <script>

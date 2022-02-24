@@ -5,7 +5,6 @@ describe("TEST GET API", () => {
   it("get api", async () => {
     const info = await request(app).get("/api/get");
     expect(info.status).toBe(200);
-    console.log(info.body.status);
   });
 });
 

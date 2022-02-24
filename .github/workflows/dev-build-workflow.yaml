@@ -67,6 +67,7 @@ jobs:
         uses: github/codeql-action/analyze@v1
 
   build:
+    name: Build
     runs-on: ubuntu-latest
 
     steps:

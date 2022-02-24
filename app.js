@@ -32,6 +32,14 @@ app.get("/api/get", async (req, res) => {
   res.json({ status: "ok", data: todos });
 });
 
+// DELETE ONE
+app.post("/api/del", async (req, res) => {
+  const id = req.body.id;
+  await Todo.deleteOne({ _id: id });
+
+  res.json({ status: "ok" });
+});
+
 // CLEAR
 app.post("/api/clear", async (req, res) => {
   await Todo.deleteMany({});

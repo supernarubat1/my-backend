@@ -1,8 +1,8 @@
 const express = require("express");
-const app = express();
 const cors = require("cors");
 const connect = require("./database/db");
 const Todo = require("./models/todo.model");
+const app = express();
 require("dotenv").config();
 
 connect();
@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/api", (req, res) => {
-  res.json({ message: "OK", env: process.env.MONGO_CON_STR });
+  res.json({ message: "OK" });
 });
 
 // ADD
@@ -33,8 +33,15 @@ app.get("/api/get", async (req, res) => {
 });
 
 // DELETE ONE
-app.post("/api/del", async (req, res) => {
-  const id = req.body.id;
+app.delete("/api/del", async (req, res) => {
+  let id = req.body.id;
+  const test = req.body.test;
+
+  if (test != undefined) {
+    const findId = await Todo.findOne({ text: test });
+    id = findId._id.toString();
+  }
+
   await Todo.deleteOne({ _id: id });
 
   res.json({ status: "ok" });
@@ -49,3 +56,5 @@ app.post("/api/clear", async (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log("Server is running..."));
+
+module.exports = app;

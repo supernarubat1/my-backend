@@ -12,6 +12,7 @@ if (process.env.NODE_ENV === "production" || process.env.NODE_ENV === "test") {
 }
 
 const connect = async () => {
+  console.log(MONGO_URL);
   await mongoose
     .connect(MONGO_URL)
     .then(() => console.log("Database connection..."))

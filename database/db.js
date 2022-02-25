@@ -3,7 +3,7 @@ require("dotenv").config();
 
 let MONGO_URL;
 
-if (process.env.NODE_ENV === undefined) {
+if (process.env.NODE_ENV === "development") {
   MONGO_URL = process.env.MONGO_CON_STR_DEV;
 }
 

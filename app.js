@@ -5,7 +5,7 @@ const Todo = require("./models/todo.model");
 const app = express();
 require("dotenv").config();
 
-connect();
+// connect();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: false }));
 app.get("/api", (req, res) => {
   let MONGO_URL;
 
-  if (process.env.NODE_ENV === undefined) {
+  if (process.env.NODE_ENV === "development") {
     MONGO_URL = process.env.MONGO_CON_STR_DEV;
   }
 
@@ -24,7 +24,7 @@ app.get("/api", (req, res) => {
     MONGO_URL = process.env.MONGO_CON_STR_POD;
   }
 
-  res.json({ message: "OK", MONGO_URL: MONGO_URL });
+  res.json({ message: "OK", env: process.env.NODE_ENV, MONGO_URL: MONGO_URL });
 });
 
 // ADD

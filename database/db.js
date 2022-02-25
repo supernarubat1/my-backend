@@ -1,21 +1,24 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-let MONGO_URL;
-
 if (process.env.NODE_ENV === "development") {
-  MONGO_URL = process.env.MONGO_CON_STR_DEV;
+  const connect = async () => {
+    await mongoose
+      .connect(process.env.MONGO_CON_STR_DEV)
+      .then(() => console.log("Database connection..."))
+      .catch((err) => console.error(err));
+  };
+
+  module.exports = connect;
 }
 
 if (process.env.NODE_ENV === "production" || process.env.NODE_ENV === "test") {
-  MONGO_URL = process.env.MONGO_CON_STR_POD;
+  const connect = async () => {
+    await mongoose
+      .connect(process.env.MONGO_CON_STR_POD)
+      .then(() => console.log("Database connection..."))
+      .catch((err) => console.error(err));
+  };
+
+  module.exports = connect;
 }
-
-const connect = async () => {
-  await mongoose
-    .connect(MONGO_URL)
-    .then(() => console.log("Database connection..."))
-    .catch((err) => console.error(err));
-};
-
-module.exports = connect;

@@ -35,6 +35,7 @@ app.get("/api", async (req, res) => {
       message: "OK",
       env: process.env.NODE_ENV,
       MONGO_URL: process.env.MONGO_CON_STR_DEV,
+      new_ver: "0.0.2",
     });
   }
 
@@ -51,6 +52,7 @@ app.get("/api", async (req, res) => {
       message: "OK",
       env: process.env.NODE_ENV,
       MONGO_URL: process.env.MONGO_CON_STR_POD,
+      new_ver: "0.0.2",
     });
   }
 
